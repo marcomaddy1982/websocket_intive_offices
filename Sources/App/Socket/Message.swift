@@ -7,14 +7,6 @@
 
 import Foundation
 
-class DataObject<T: Codable>: Codable {
-    let data: T
-
-    init(data: T) {
-        self.data = data
-    }
-}
-
 protocol SocketMessageProtocol {
     var id: String? { get }
     var source: SideType { get }

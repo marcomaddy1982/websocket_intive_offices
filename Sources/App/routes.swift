@@ -36,18 +36,20 @@ public func routes(_ wss: NIOWebSocketServer) {
             }
 
             switch messageData.event {
+            case .message:
+                if let testMessage: TestMessageObject = messageData.getValue() {
+                    ws.send(testMessage.message)
+                }
             case .locations:
-                if let messageToClient = Message.prepare(id: messageData.id, event: .locations, data: Location.mocks)?.asString() {
+                if let messageToClient = MessageToServer<[Location]>.prepare(id: messageData.id, event: .locations, data: Location.mocks)?.asString() {
                     ws.send(messageToClient)
                     print("sent: \(messageToClient)")
                 }
             case .office:
-                if let locationId: String = messageData.getValue(), let loc = LocationID(rawValue: locationId), let messageToClient = Message.prepare(id: messageData.id, event: .locations, data: Office.mock(for: loc))?.asString() {
+                if let locationId: String = messageData.getValue(), let loc = LocationID(rawValue: locationId), let messageToClient = MessageToServer<Office>.prepare(id: messageData.id, event: .locations, data: Office.mock(for: loc))?.asString() {
                     ws.send(messageToClient)
                     print("sent: \(messageToClient)")
                 }
-            default:
-                break
             }
         })
     }

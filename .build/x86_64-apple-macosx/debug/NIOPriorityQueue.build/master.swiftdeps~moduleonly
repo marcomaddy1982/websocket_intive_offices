@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "2da3faff76eab4ed559065e671e1ba3e"
+build_time: [1563876636, 183473000]
+inputs:
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOPriorityQueue/Heap.swift": [1563876629, 61091288]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOPriorityQueue/PriorityQueue.swift": [1563876629, 61247189]

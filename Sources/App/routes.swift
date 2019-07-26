@@ -25,28 +25,28 @@ public func routes(_ wss: NIOWebSocketServer) {
             ConnectionsController.shared.remove(connectionAt: connectionTime)
         }
 
-        ws.onText({ (ws, message) in
+        ws.onText({ (ws, incommingSocketMessage) in
             //ws.send("REQUEST FROM YOU --> \(message)")
-            print("recieved: \(message)")
+            print("recieved: \(incommingSocketMessage)")
 
-            guard let data = message.replacingOccurrences(of: "\\", with: "").data(using: .utf8),
-                  let messageData = try? JSONDecoder().decode(Message.self, from: data),
-                  messageData.destination == .server else {
+            guard let jsonData = incommingSocketMessage.replacingOccurrences(of: "\\", with: "").data(using: .utf8),
+                  let message = try? JSONDecoder().decode(IncommingMessage.self, from: jsonData),
+                  message.destination == .server else {
                 return
             }
 
-            switch messageData.event {
+            switch message.event {
             case .message:
-                if let testMessage: TestMessageObject = messageData.getValue() {
+                if let testMessage: TestMessageObject = message.data() {
                     ws.send(testMessage.message)
                 }
             case .locations:
-                if let messageToClient = MessageToServer<[Location]>.prepare(id: messageData.id, event: .locations, data: Location.mocks)?.asString() {
+                if let messageToClient = OutcommingMessage<[Location]>.prepare(id: message.id, event: .locations, data: Location.mocks)?.asString() {
                     ws.send(messageToClient)
                     print("sent: \(messageToClient)")
                 }
             case .office:
-                if let locationId: String = messageData.getValue(), let loc = LocationID(rawValue: locationId), let messageToClient = MessageToServer<Office>.prepare(id: messageData.id, event: .locations, data: Office.mock(for: loc))?.asString() {
+                if let locationId: String = message.data(), let loc = LocationID(rawValue: locationId), let messageToClient = OutcommingMessage<Office>.prepare(id: message.id, event: .locations, data: Office.mock(for: loc))?.asString() {
                     ws.send(messageToClient)
                     print("sent: \(messageToClient)")
                 }

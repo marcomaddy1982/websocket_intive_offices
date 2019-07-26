@@ -22,15 +22,15 @@ protocol SocketMessageProtocol {
     var event: SocketEvent { get }
 }
 
-struct MessageToServer<T: Encodable>: Encodable, SocketMessageProtocol {
+struct OutcommingMessage<T: Encodable>: Encodable, SocketMessageProtocol {
     let id: String?
     let source: SideType
     let destination: SideType
     let event: SocketEvent
     let data: T
 
-    static func prepare<T: Codable>(id: String?, event: SocketEvent, data: T) -> MessageToServer<T>? {
-        return MessageToServer<T>(id: id, source: .server, destination: .client, event: event, data: data)
+    static func prepare<T: Codable>(id: String?, event: SocketEvent, data: T) -> OutcommingMessage<T>? {
+        return OutcommingMessage<T>(id: id, source: .server, destination: .client, event: event, data: data)
     }
 
     /// returns a json representation of the Message object binding a passed json to a data.
@@ -40,9 +40,17 @@ struct MessageToServer<T: Encodable>: Encodable, SocketMessageProtocol {
         }
         return messageString
     }
+
+    /// returns a data encoded from a Message object.
+    func asData() -> Data? {
+        guard let messageData = try? JSONEncoder().encode(self) else {
+            return nil
+        }
+        return messageData
+    }
 }
 
-struct Message: Codable, SocketMessageProtocol {
+struct IncommingMessage: Codable, SocketMessageProtocol {
     let id: String?
     let source: SideType
     let destination: SideType
@@ -66,7 +74,9 @@ struct Message: Codable, SocketMessageProtocol {
         self.decoder = decoder
     }
 
-    func getValue<T>() -> T? {
+    /// used to parse a decodable object from a message
+    /// you need to provode a required type for each specific event
+    func data<T>() -> T? {
         guard let dataContainer = try? decoder.container(keyedBy: DataCodingKeys.self) else {
             return nil
         }
@@ -78,7 +88,8 @@ struct Message: Codable, SocketMessageProtocol {
         }
     }
 
-    static func get<T: Codable>(type: T.Type, from string: String) -> DataMessage<T>? {
+    /// Used to parse the data from incomming message, in case if the data = string that represention json
+    static func data<T: Codable>(type: T.Type, from string: String) -> DataMessage<T>? {
         if let data = string.data(using: .utf8), let object = try? JSONDecoder().decode(DataMessage<T>.self, from: data) {
             return object
         }

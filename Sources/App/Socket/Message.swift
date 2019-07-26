@@ -7,12 +7,50 @@
 
 import Foundation
 
+class DataObject<T: Codable>: Codable {
+    let data: T
+
+    init(data: T) {
+        self.data = data
+    }
+}
+
+
 struct Message: Codable {
     let id: String?
     let source: SideType
     let destination: SideType
     let event: SocketEvent
-    let data: String?
+    let decoder: Decoder
+
+    enum CodingKeys: String, CodingKey {
+        case source, id, destination, event
+    }
+
+    enum DataCodingKeys: String, CodingKey {
+        case data = "data"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        source = try container.decode(SideType.self, forKey: .source)
+        destination = try container.decode(SideType.self, forKey: .destination)
+        event = try container.decode(SocketEvent.self, forKey: .event)
+        self.decoder = decoder
+    }
+
+    func getValue<T>() -> T? {
+        guard let dataContainer = try? decoder.container(keyedBy: DataCodingKeys.self) else {
+            return nil
+        }
+        switch event {
+        case .message:
+            return (try? dataContainer.decode(Message.self, forKey: .data)) as? T
+        default:
+            return (try? dataContainer.decode(String.self, forKey: .data)) as? T
+        }
+    }
 
     /// returns a json representation of the Message object binding a passed json to a data.
     func asString() -> String? {
@@ -44,14 +82,16 @@ struct Message: Codable {
             let objectString = String(data: objectData, encoding: .utf8) else {
                 return nil
         }
-        return Message(id: id, source: .server, destination: .client, event: event, data: objectString)
+        return nil
+        //return Message(id: id, source: .server, destination: .client, event: event, data: objectString)
     }
 
     static func prepare<T: Codable>(id: String?, event: SocketEvent, data: T) -> Message? {
         guard let objectData = try? JSONEncoder().encode(data), let objectString = String(data: objectData, encoding: .utf8) else {
             return nil
         }
-        return Message(id: id, source: .server, destination: .client, event: event, data: objectString)
+        return nil
+        //return Message(id: id, source: .server, destination: .client, event: event, data: objectString)
     }
 }
 

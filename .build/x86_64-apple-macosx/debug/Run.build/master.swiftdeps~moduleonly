@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
-options: "c713e0413a3360dc6818a71dd864f1f4"
-build_time: [1563876664, 218622000]
-inputs:
-  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/Sources/Run/main.swift": [1563876576, 501110778]

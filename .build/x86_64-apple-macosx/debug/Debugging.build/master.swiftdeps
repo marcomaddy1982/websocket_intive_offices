@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "bebe34a600fb7ed8e8f0d45a16ee352d"
+build_time: [1563876636, 183472000]
+inputs:
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/core/Sources/Debugging/Debuggable.swift": [1563876629, 955521937]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/core/Sources/Debugging/Demangler.swift": [1563876629, 955694753]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/core/Sources/Debugging/SourceLocation.swift": [1563876629, 955809195]

@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "0681630f7942a94d42a176c7b00ecae0"
+build_time: [1563876649, 102730000]
+inputs:
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/console/Sources/Logging/Exports.swift": [1563876628, 495277548]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/console/Sources/Logging/LogLevel.swift": [1563876628, 495415307]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/console/Sources/Logging/Logger.swift": [1563876628, 495543464]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/console/Sources/Logging/PrintLogger.swift": [1563876628, 495694022]

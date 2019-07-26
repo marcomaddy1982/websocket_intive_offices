@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "5932698ea0f2cc40a069f757cc1cb290"
+build_time: [1563876646, 44775000]
+inputs:
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Random/Array+Random.swift": [1563876628, 45752709]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Random/OSRandom.swift": [1563876628, 45873118]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Random/RandomProtocol.swift": [1563876628, 45979505]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Random/URandom.swift": [1563876628, 46104332]

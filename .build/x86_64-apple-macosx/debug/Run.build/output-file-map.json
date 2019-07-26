@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/x86_64-apple-macosx/debug/Run.build/master.swiftdeps"
+  },
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/Sources/Run/main.swift": {
+    "dependencies": "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/x86_64-apple-macosx/debug/Run.build/main.d",
+    "object": "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/x86_64-apple-macosx/debug/Run.build/main.swift.o",
+    "swiftmodule": "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/x86_64-apple-macosx/debug/Run.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/x86_64-apple-macosx/debug/Run.build/main.swiftdeps"
+  }
+}

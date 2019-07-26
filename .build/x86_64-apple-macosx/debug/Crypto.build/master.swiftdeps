@@ -1,0 +1,23 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "83a0b4aa06646e434862858019111075"
+build_time: [1563876649, 104999000]
+inputs:
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/BCrypt/BCryptDigest.swift": [1563876628, 42563091]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Cipher/AuthenticatedCipher.swift": [1563876628, 42766885]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Cipher/AuthenticatedCipherAlgorithm.swift": [1563876628, 42907773]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Cipher/Cipher.swift": [1563876628, 43094774]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Cipher/CipherAlgorithm.swift": [1563876628, 43219093]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Cipher/OpenSSLCipherAlgorithm.swift": [1563876628, 43347360]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Cipher/OpenSSLStreamCipher.swift": [1563876628, 43515542]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Digest/Digest.swift": [1563876628, 43762806]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Digest/DigestAlgorithm.swift": [1563876628, 43903731]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/MAC/HMAC.swift": [1563876628, 44096850]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/MAC/OTP.swift": [1563876628, 44235289]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/RSA/RSA.swift": [1563876628, 44465518]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/RSA/RSAKey.swift": [1563876628, 44636207]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/RSA/RSAPadding.swift": [1563876628, 44771693]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Random/CryptoRandom.swift": [1563876628, 44970148]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Utilities/Base32.swift": [1563876628, 45215012]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Utilities/CryptoError.swift": [1563876628, 45344392]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Utilities/Deprecated.swift": [1563876628, 45459278]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/crypto/Sources/Crypto/Utilities/Exports.swift": [1563876628, 45577073]

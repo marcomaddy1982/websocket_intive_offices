@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "bf939add10e145ab7ef0e9571f7d46aa"
+build_time: [1563876644, 468754000]
+inputs:
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOTLS/ApplicationProtocolNegotiationHandler.swift": [1563876629, 61645597]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOTLS/SNIHandler.swift": [1563876629, 62120525]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOTLS/TLSEvents.swift": [1563876629, 62391373]

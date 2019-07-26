@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "46f16af97114ce70157ab14151ce9325"
+build_time: [1563876644, 468018000]
+inputs:
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/ByteCollectionUtils.swift": [1563876629, 57394995]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPDecoder.swift": [1563876629, 57813455]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPEncoder.swift": [1563876629, 58124376]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPPipelineSetup.swift": [1563876629, 58376437]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPResponseCompressor.swift": [1563876629, 58575071]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPServerPipelineHandler.swift": [1563876629, 58893129]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPServerProtocolErrorHandler.swift": [1563876629, 59142325]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPTypes.swift": [1563876629, 59680492]
+  "/Users/viktor.nakyden/workfolder_intive/ssswift/HelloVapor/.build/checkouts/swift-nio/Sources/NIOHTTP1/HTTPUpgradeHandler.swift": [1563876629, 59955523]
